@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #interaja {
+            width: 200px;
+            background-color:aquamarine;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            margin: 200px auto;
+
+        }
+
+    </style>
+</head>
+<body>
+   <div id="interaja" >interaja</div>
+    <script>
+
+        var caixa = document.getElementById('interaja')
+
+        caixa.addEventListener('click', clicar)
+        caixa.addEventListener('mouseenter', entrar )
+
+        function clicar(){
+           caixa.innerHTML = "Cliquei" 
+           caixa.style.background = '#1a1a1a'
+        }
+
+        function entrar(){
+            caixa.style.background = "pink"
+            caixa.style.color = "white"
+            caixa.innerHTML = "Entrei"
+        }
+    </script>
+</body>
+</html>
