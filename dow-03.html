@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        #resultado {
+            margin-top: 40px;
+            font-size: 40px;
+        }
+
+    </style>
+</head>
+<body>
+   <h1>SISTEMA DE MULTAS</h1>
+
+   
+    <input type="number" id="numero">
+    <input type="button" value="Calcular" id="enviar">
+    <div id="resultado"></div>
+
+    
+    <script>
+       // SISTEMAS DE MULTAS JS
+       var calc = document.getElementById('resultado')
+       var n1 = document.getElementById('numero')
+       var botao = document.getElementById('enviar')
+       botao.addEventListener('click', chamar)
+
+       function chamar(){
+        var tn1 = Number(n1.value)
+        calc.innerHTML = tn1
+        
+        if (tn1 > 80){
+            calc.style.color = 'red'
+            calc.innerText += `Km: Velocidade não permitida será aplicada multa.`
+            
+        }else{
+            calc.innerHTML += 'Km : Velocidade permitida, Parabéns. '
+            calc.style.color = 'Green'
+        }
+
+
+       }
+       
+       
+    </script>
+</body>
+</html>
