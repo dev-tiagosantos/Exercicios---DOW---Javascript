@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+   
+
+    </style>
+</head>
+<body>
+   <h1>Somando Valores</h1>
+   <input type="number" id="numero1">
+   <input type="number" id="numero2">
+   <input type="button" id="enviar" value="Enviar">
+   <div id="result"></div>
+    <script>
+
+       
+        var n1 = document.getElementById('numero1')
+        var n2 = document.getElementById('numero2')
+        var enviar = document.getElementById('enviar')
+        var calculo = document.getElementById('result')
+        enviar.addEventListener('click', somar)
+
+        function somar(){
+          
+        var tn1 = Number(n1.value)
+        var tn2 = Number(n2.value)
+        res = tn1 + tn2
+        calculo.innerText = res
+        }
+       
+    </script>
+</body>
+</html>
